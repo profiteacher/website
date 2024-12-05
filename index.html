@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Моя Визитка</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Анимация при наведении */
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
+        }
+        /* Плавный переход */
+        .transition {
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
 
     <header class="bg-gray-800 text-white text-center py-10">
-        <h1 class="text-4xl font-bold">Привет, я Виктория</h1>
+        <h1 class="text-5xl font-bold animate__animated animate__fadeIn">Привет, я Виктория</h1>
         <p class="text-xl">Профессиональный преподаватель англ. и нем. яз. для детей и взрослых</p>
     </header>
 
@@ -22,7 +32,7 @@
     </nav>
 
     <main class="max-w-4xl mx-auto p-6">
-        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <section id="about" class="bg-white p-6 rounded-lg shadow-md mb-6 transition hover:scale-105">
             <h2 class="text-2xl font-semibold mb-4">Обо мне</h2>
             <p>Я - профессиональный преподаватель англ. и нем. яз. для детей и взрослых. </p>
               <p>Окончила российский государственный педагогический университет им. А.И. Герцена, преподаю в ВУЗе. </p>
@@ -30,7 +40,7 @@
               <p>Занимаюсь подготовкой к ОГЭ, ЕГЭ.</p>
         </section>
 
-        <section id="skills" class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <section id="skills" class="bg-white p-6 rounded-lg shadow-md mb-6 transition hover:scale-105">
             <h2 class="text-2xl font-semibold mb-4">Навыки</h2>
             <ul class="list-disc list-inside">
                 <li>Подготовка к ОГЭ</li>
@@ -41,7 +51,7 @@
             </ul>
         </section>
 
-        <section id="contact" class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <section id="contact" class="bg-white p-6 rounded-lg shadow-md mb-6 transition hover:scale-105">
             <h2 class="text-2xl font-semibold mb-4">Контакты</h2>
             <p>Email: <a href="mailto:vikkatishkova@yandex.ru" class="text-blue-500">vikkatishkova@yandex.ru</a></p>
             <p>Telegram: @VikKa_80</p>
@@ -51,6 +61,8 @@
     <footer class="bg-gray-800 text-white text-center py-4">
         <p>&copy; 2025 Arty. Все права защищены.</p>
     </footer>
-
+    
+    <!-- Подключение Animate.css для анимаций -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </body>
 </html>
